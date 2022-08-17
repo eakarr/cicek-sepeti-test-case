@@ -1,0 +1,22 @@
+@import "../../../styles/mixin";
+@import "../../../styles/variables";
+
+.header {
+  &--breadcrumb {
+    @include pad(3, 2);
+    font-size: 0.8rem;
+
+    &-navigation {
+      color: $c-darkGray;
+      &:last-child {
+        color: $c-green;
+      }
+    }
+
+    &-bsign {
+      @include mar(0, 2);
+      color: $c-darkGray;
+      transform: scale(1, 2);
+    }
+  }
+}

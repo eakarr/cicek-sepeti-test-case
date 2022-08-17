@@ -1,0 +1,11 @@
+@import "../../styles/variables";
+@import "../../styles/mixin";
+
+.footer {
+  background-color: $c-footerbg;
+  padding: 145px 4px 0 4px;
+  
+  @include mediaQuery(sdevice) {
+    padding: 90px 4px 0 4px;
+  }
+}

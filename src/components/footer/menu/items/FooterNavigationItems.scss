@@ -1,0 +1,49 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixin";
+
+.footer--socials {
+  &_nav {
+    padding-left: 100px;
+    @include mediaQuery(mdevice) {
+      @include pleft(9);
+    }
+    @include mediaQuery(sdevice) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      @include pad(9, 2, 0, 2);
+    }
+  }
+
+  &_navitem {
+    padding-right: 50px;
+    & > p {
+      text-align: center;
+      @include mar(0);
+      font-size: 18px;
+      @include pbot(2);
+      color: $c-blue;
+    }
+    &:last-child {
+      @include pright(0);
+    }
+
+    @include mediaQuery(mdevice) {
+      @include pright(5);
+    }
+
+    @include mediaQuery(sdevice) {
+      @include pad(0, 0, 4, 0);
+    }
+  }
+
+  &_navlist_item {
+    @include pbot(2);
+    & > a {
+      text-align: center;
+      width: 100%;
+      font-size: 15px;
+      color: $c-black;
+    }
+  }
+}

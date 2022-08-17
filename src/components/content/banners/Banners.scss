@@ -1,0 +1,23 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixin";
+
+.banners {
+  &--container {
+    border-top: 2px solid $c-lightGray;
+    margin: 30px 0 108px 0;
+    @include ptop(8);
+    @include mediaQuery(sdevice) {
+      padding-top: 60px;
+      margin: 60px 0 64px 0;
+    }
+  }
+  &--sub_container {
+    @include padx(2);
+    display: grid;
+    grid-gap: 1.25rem;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixin";
+
+.categories {
+  &--ulist {
+    &-item {
+      width: 195px;
+      height: 52px;
+      border-radius: 0.5rem;
+      background-color: $c-white;
+      border: 1px solid $c-gray;
+
+      &:hover {
+        border: 1px solid $c-blue;
+      }
+      &.active {
+        background-color: $c-blue;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+    &-item_navigation {
+      font-weight: 700;
+      color: $c-darkerGray2;
+
+      &.active {
+        color: $c-white;
+      }
+    }
+  }
+}

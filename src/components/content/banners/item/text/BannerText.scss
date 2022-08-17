@@ -1,0 +1,14 @@
+@import "../../../../../styles/variables";
+@import "../../../../../styles/mixin";
+
+.banner {
+  &--text {
+    color: $c-darkerGray2;
+    @include mar(0, 0, 3, 0);
+    font-size: 20px;
+    font-weight: 300;
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+}

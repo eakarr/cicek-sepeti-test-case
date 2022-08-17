@@ -1,0 +1,20 @@
+@import "../../../../../styles/variables";
+@import "../../../../../styles/mixin";
+
+.footer {
+  &--socials_confidentials {
+    color: $c-black;
+    @include mar(0);
+    padding: 1.5rem 0 5rem 0;
+    font-size: 15px;
+    & > a {
+      color: $c-black;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+    @include mediaQuery(sdevice) {
+      @include pad(6, 0, 10, 0);
+      text-align: center;
+    }
+  }
+}

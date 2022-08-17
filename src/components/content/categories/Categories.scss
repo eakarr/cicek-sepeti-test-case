@@ -1,0 +1,32 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixin";
+
+.category-title {
+  background: none;
+  border: none;
+  @include pad(0);
+  cursor: pointer;
+  & > img {
+    @include mright(2);
+  }
+  & > h3 {
+    @include mar(0);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $c-blue;
+  }
+}
+
+.categories {
+  @include pad(0, 2);
+
+  &--ulist {
+    @include pad(4, 0, 0, 0);
+    display: grid;
+    grid-gap: 0.6rem;
+    grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+    }
+  }
+}

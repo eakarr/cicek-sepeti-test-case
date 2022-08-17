@@ -1,0 +1,155 @@
+// Commanly used sizes
+$spacing-sizes: (
+  0: 0px,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 1rem,
+  5: 1.25rem,
+  6: 1.5rem,
+  7: 1.75rem,
+  8: 2rem,
+  9: 2.25rem,
+  10: 2.5rem,
+);
+
+// Padding
+@mixin pad($top: 1, $right: null, $bot: null, $left: null) {
+  @if ($top and $right and $bot and $left) {
+    @include ptop($top);
+    @include pright($right);
+    @include pbot($bot);
+    @include pleft($left);
+  } @else if($top and $right and $bot and not $left) {
+    @include ptop($top);
+    @include padx($right);
+    @include pbot($bot);
+  } @else if ($top and $right and not $bot and not $left) {
+    @include pady($top);
+    @include padx($right);
+  } @else if ($top and not $right and not $bot and not $left) {
+    @include pady($top);
+    @include padx($top);
+  } @else {
+    @error "Invalid parameter(s) entered!";
+  }
+}
+
+@mixin padx($right: 1, $left: null) {
+  @if ($right and $left) {
+    @include pright($right);
+    @include pleft($left);
+  } @else if ($right and not $left) {
+    @include pright($right);
+    @include pleft($right);
+  } @else {
+    @error "Invalid parameter(s) entered!";
+  }
+}
+
+@mixin pady($top: 1, $bot: null) {
+  @if ($top and $bot) {
+    @include ptop($top);
+    @include pbot($bot);
+  } @else if ($top and not $bot) {
+    @include ptop($top);
+    @include pbot($top);
+  } @else {
+    @error "Invalid parameter(s) entered!";
+  }
+}
+
+@mixin ptop($value: 1) {
+  padding-top: map-get($map: $spacing-sizes, $key: $value);
+}
+
+@mixin pright($value: 1) {
+  padding-right: map-get($map: $spacing-sizes, $key: $value);
+}
+
+@mixin pbot($value: 1) {
+  padding-bottom: map-get($map: $spacing-sizes, $key: $value);
+}
+
+@mixin pleft($value: 1) {
+  padding-left: map-get($map: $spacing-sizes, $key: $value);
+}
+
+// Margin
+@mixin mar($top: 1, $right: null, $bot: null, $left: null) {
+  @if ($top and $right and $bot and $left) {
+    @include mtop($top);
+    @include mright($right);
+    @include mbot($bot);
+    @include mleft($left);
+  } @else if($top and $right and $bot and not $left) {
+    @include mtop($top);
+    @include madx($right);
+    @include mbot($bot);
+  } @else if ($top and $right and not $bot and not $left) {
+    @include mary($top);
+    @include marx($right);
+  } @else if ($top and not $right and not $bot and not $left) {
+    @include mary($top);
+    @include marx($top);
+  } @else {
+    @error "Invalid parameter(s) entered!";
+  }
+}
+
+@mixin marx($right: 1, $left: null) {
+  @if ($right and $left) {
+    @include mright($right);
+    @include mleft($left);
+  } @else if ($right and not $left) {
+    @include mright($right);
+    @include mleft($right);
+  } @else {
+    @error "Invalid parameter(s) entered!";
+  }
+}
+
+@mixin mary($top: 1, $bot: null) {
+  @if ($top and $bot) {
+    @include mtop($top);
+    @include mbot($bot);
+  } @else if ($top and not $bot) {
+    @include mtop($top);
+    @include mbot($top);
+  } @else {
+    @error "Invalid parameter(s) entered!";
+  }
+}
+
+@mixin mtop($value: 1) {
+  margin-top: map-get($map: $spacing-sizes, $key: $value);
+}
+
+@mixin mright($value: 1) {
+  margin-right: map-get($map: $spacing-sizes, $key: $value);
+}
+
+@mixin mbot($value: 1) {
+  margin-bottom: map-get($map: $spacing-sizes, $key: $value);
+}
+
+@mixin mleft($value: 1) {
+  margin-left: map-get($map: $spacing-sizes, $key: $value);
+}
+
+
+// Media query
+@mixin mediaQuery($screensize) {
+
+  @if $screensize==sdevice {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  
+  @if $screensize==mdevice {
+    @media only screen and (max-width: 1280px) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import "../../../styles/mixin";
+@import "../../../styles/variables";
+
+.header {
+  &--divider {
+    height: 74px;
+    background-image: url(../../../../public/assets/divider.png);
+    &-h2 {
+      @include padx(2);
+      color: $c-white;
+      font-size: 2.25rem;
+      font-weight: 400;
+    }
+
+    @include mediaQuery(sdevice) {
+      height: 60px;
+      &-h2 {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}

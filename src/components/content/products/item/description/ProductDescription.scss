@@ -1,0 +1,12 @@
+@import "../../../../../styles/variables";
+@import "../../../../../styles/mixin";
+
+.product {
+  &--description {
+    height: 2rem;
+    @include mary(1);
+    color: $c-darkGray;
+    font-weight: 700;
+    font-size: 15px;
+  }
+}

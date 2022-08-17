@@ -1,0 +1,66 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixin";
+
+.footer {
+  &--all_apps {
+    height: 222px;
+    background-color: $c-white;
+    border-radius: 111px;
+    @include pbot(2);
+    margin-bottom: 5rem;
+
+    @include mediaQuery(sdevice) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      border-radius: 10px;
+    }
+  }
+  &--apps {
+    @include mleft(8);
+
+    @include mediaQuery(mdevice) {
+      @include mleft(1);
+    }
+
+    @include mediaQuery(sdevice) {
+      @include mar(4, 0, 4, 0);
+    }
+
+    &_info {
+      &--container {
+        @include mbot(6);
+
+        @include mediaQuery(sdevice) {
+          @include pad(0, 2);
+        }
+      }
+    }
+
+    &_info1 {
+      @include mar(0, 0, 2, 0);
+      font-size: 18px;
+      font-weight: 700;
+      color: $c-black;
+
+      @include mediaQuery(sdevice) {
+        font-size: 17px;
+      }
+    }
+
+    &_info2 {
+      @include mar(0);
+      color: $c-black;
+    }
+  }
+
+  &--gplay {
+    @include mright(3);
+
+    @include mediaQuery(sdevice) {
+      @include mright(1);
+    }
+  }
+}

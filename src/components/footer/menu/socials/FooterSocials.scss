@@ -1,0 +1,34 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixin";
+
+.footer {
+  &--socials {
+    width: 55%;
+    border-right: 0.25rem dotted #cfd1d1;
+    padding-right: 50px;
+    @include mediaQuery(mdevice) {
+      width: 35%;
+    }
+    @include mediaQuery(sdevice) {
+      width: 100%;
+      align-items: center;
+      border-right: none;
+      border-bottom: 0.25rem dotted #cfd1d1;
+      @include pad(0, 2);
+    }
+  }
+
+  &--socials_logo {
+    @include pbot(8);
+  }
+
+  &--socials_icons {
+    width: 300px;
+    @include mediaQuery(mdevice) {
+      width: 100%;
+    }
+    @include mediaQuery(sdevice) {
+      justify-content: space-around;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import "../../../styles/mixin";
+@import "../../../styles/variables";
+
+.header {
+  &--search-bar {
+    height: 50px;
+    width: 73%;
+    margin: 0 5rem;
+    border: 2px solid $c-lightGray;
+    border-radius: 2rem;
+    background-color: $c-lighterGray;
+    img {
+      @include mar(0, 1, 0, 4);
+    }
+
+    input {
+      width: 100%;
+      border: none;
+      color: $c-darkGray;
+      background-color: $c-lighterGray;
+      font-family: inherit;
+      font-size: medium;
+    }
+
+    button {
+      height: 40px;
+      width: 66px;
+      @include mright(2);
+      border: none;
+      border-radius: 2rem;
+      color: $c-white;
+      background-color: $c-green;
+      font-size: large;
+    }
+    @include mediaQuery(sdevice) {
+      width: 100%;
+      @include mar(2, 0, 0, 0);
+    }
+  }
+}

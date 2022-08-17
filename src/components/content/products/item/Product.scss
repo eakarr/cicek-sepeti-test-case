@@ -1,0 +1,17 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixin";
+
+.product {
+  border-radius: 10px;
+  @include pad(4);
+  border: 1px solid $c-gray;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid $c-green;
+  }
+
+  &--information {
+    @include pleft(2);
+  }
+}

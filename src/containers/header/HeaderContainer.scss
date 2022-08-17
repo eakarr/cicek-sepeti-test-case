@@ -1,0 +1,34 @@
+@import "../../styles/variables";
+@import "../../styles/mixin";
+
+.header {
+  &--main {
+    @include pad(5, 2);
+
+    @include mediaQuery(sdevice) {
+      @include pad(3, 2);
+    }
+  }
+
+  &--main_container {
+    @include mediaQuery(sdevice) {
+      justify-content: space-between;
+    }
+  }
+
+  &--desktop {
+    display: flex;
+
+    @include mediaQuery(sdevice) {
+      display: none;
+    }
+  }
+
+  &--mobile {
+    display: none;
+
+    @include mediaQuery(sdevice) {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixin";
+
+.products {
+  @include pad(4, 2);
+  &--title {
+    @include mar(5, 0, 3, 0);
+
+    & > img {
+      @include mright(2);
+    }
+    & > h3 {
+      @include mar(0);
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: $c-darkerGray2;
+      height: 25px;
+    }
+  }
+
+  &--container {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+  }
+}

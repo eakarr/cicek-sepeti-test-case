@@ -1,0 +1,15 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixin";
+
+.footer {
+  &--menu {
+    margin-bottom: 6rem;
+
+    @include mediaQuery(sdevice) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      @include mbot(8);
+    }
+  }
+}

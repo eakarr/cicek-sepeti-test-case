@@ -1,0 +1,14 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixin";
+
+.footer {
+  &--copyrights_container {
+    height: 4rem;
+    background-color: $c-footercr;
+  }
+
+  &--copyrights {
+    font-size: 13px;
+    @include mar(0);
+  }
+}

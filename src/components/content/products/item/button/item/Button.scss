@@ -1,0 +1,11 @@
+@import "../../../../../../styles/variables";
+@import "../../../../../../styles/mixin";
+
+.product {
+  &--button {
+    @include pad(1);
+    border: none;
+    background-color: $c-white;
+    border-radius: 100%;
+  }
+}

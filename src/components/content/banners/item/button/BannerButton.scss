@@ -1,0 +1,14 @@
+@import "../../../../../styles/variables";
+@import "../../../../../styles/mixin";
+
+.banner {
+  &--button {
+    @include pad(2, 4);
+    background-color: $c-white;
+    border-radius: 15px;
+    border: none;
+    color: $c-bannerPink;
+    font-size: 13px;
+    font-weight: 700;
+  }
+}

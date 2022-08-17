@@ -1,0 +1,29 @@
+@import "../../../../../styles/variables";
+@import "../../../../../styles/mixin";
+
+.product {
+  &--button {
+    &-container {
+      height: 40px;
+      border-radius: 25px;
+      border: 1px solid $c-gray;
+      background-color: $c-white;
+    }
+
+    &-counter {
+      color: $c-darkGray;
+      font-weight: 700;
+      font-size: 22px;
+    }
+
+    &-addtobasket {
+      height: 40px;
+      border-radius: 25px;
+      border: 1px solid $c-blue;
+      color: $c-blue;
+      background-color: $c-white;
+      font-weight: 700;
+      font-size: 15px;
+    }
+  }
+}

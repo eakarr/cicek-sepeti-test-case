@@ -1,0 +1,12 @@
+@import "../../../../../styles/variables";
+@import "../../../../../styles/mixin";
+
+.product {
+  &--shipping {
+    height: 1rem;
+    @include mary(1);
+    color: $c-green;
+    font-weight: 700;
+    font-size: 15px;
+  }
+}

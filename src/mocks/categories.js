@@ -1,0 +1,16 @@
+export const categories = [
+  { id: Math.random(), categoryName: "Tüm Kategoriler" },
+  { id: Math.random(), categoryName: "Elektronik" },
+  { id: Math.random(), categoryName: "Ev ve Yaşam" },
+  { id: Math.random(), categoryName: "Evcil Hayvan" },
+  { id: Math.random(), categoryName: "Kitap" },
+  { id: Math.random(), categoryName: "Oyuncak" },
+  { id: Math.random(), categoryName: "Spor" },
+  { id: Math.random(), categoryName: "Çiçek" },
+  { id: Math.random(), categoryName: "Hediye" },
+  { id: Math.random(), categoryName: "Moda, Aksesuar" },
+  { id: Math.random(), categoryName: "Ofis, Kırtasiye" },
+  { id: Math.random(), categoryName: "Parfüm" },
+  { id: Math.random(), categoryName: "Kişisel Bakım" },
+  { id: Math.random(), categoryName: "Petshop" },
+];

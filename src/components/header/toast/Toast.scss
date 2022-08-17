@@ -1,0 +1,60 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixin";
+
+.toast {
+  position: absolute;
+  top: 58px;
+  right: 0;
+  width: 345px;
+  height: 70px;
+  background-color: $c-toastbg;
+  border-radius: 0.5rem;
+
+  &--container {
+    width: 100%;
+    position: relative;
+    @include pad(4);
+  }
+
+  @include mediaQuery(mdevice) {
+    width: 280px;
+    top: 58px;
+  }
+  @include mediaQuery(sdevice) {
+    top: 53px;
+  }
+
+  &--information {
+    @include mbot(2);
+
+    p {
+      color: $c-white;
+      @include mar(0);
+    }
+
+    span {
+      color: $c-toastpb;
+      @include mar(0, 1);
+      font-weight: 700;
+    }
+  }
+
+  &--progression {
+    z-index: 1;
+    border-radius: 12px;
+    background-color: $c-toastbgdark;
+
+    & > div {
+      transition: all ease 400ms;
+    }
+  }
+
+  &--arrow {
+    position: absolute;
+    top: -8px;
+    right: 35px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid $c-toastbg;
+  }
+}

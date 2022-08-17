@@ -1,0 +1,27 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixin";
+
+.banner {
+  @include pad(3);
+  border-radius: 10px;
+
+  &--information {
+    height: 100%;
+    @include pleft(9);
+    @media screen and (max-width: 768px) {
+      @include pleft(6);
+    }
+  }
+
+  &--red {
+    background-color: $c-bannerRed;
+  }
+
+  &--blue {
+    background-color: $c-bannerBlue;
+  }
+
+  &--green {
+    background-color: $c-bannerGreen;
+  }
+}
